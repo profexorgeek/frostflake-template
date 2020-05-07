@@ -6,9 +6,11 @@ This repo includes a basic webpack configuration, **project.json** and some cust
 
 ## Get started
 
-To get started:
+You will need to have Node installed and a basic understanding of how to run
+Node commands in a terminal. Follow these steps to start a new game with
+the [FrostFlake game engine](https://github.com/profexorgeek/frostflake):
 
-1. Fork this repo
+1. Fork this repo and clone locally
 1. Run: `npm install` to fetch FrostFlake and webpack dependencies
 1. Run: `npm run build` to watch for file changes and rebuild
 1. Run: `npm start` to start `http-server` and run the game at `http://localhost:8080`
