@@ -17,11 +17,7 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                include: [
-                    path.resolve(__dirname, 'start.js'),
-                    path.resolve(__dirname, 'src'),
-                    path.resolve(__dirname, 'node_modules/frostflake')
-                ],
+                exclude: (/node_modules/),
                 use: {
                     loader: 'babel-loader',
                     options: {
@@ -35,5 +31,15 @@ module.exports = {
                 }
             }
         ]
+    },
+    devServer: {
+        hot: true,
+        port: 8080,
+        publicPath: '/',
+        stats: {
+            hash: false,
+            chunks: false,
+            warnings: false
+        }
     }
 }
