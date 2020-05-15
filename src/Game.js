@@ -1,12 +1,12 @@
-import FrostFlake from '../node_modules/frostflake/FrostFlake.js';
+import FrostFlake from 'frostflake/FrostFlake';
 
-import AnimationDemo from './Views/AnimationDemo.js';
-import AudioDemo from './Views/AudioDemo.js';
+import AnimationDemo from './Views/AnimationDemo';
+import AudioDemo from './Views/AudioDemo';
 import CollisionDemo from './Views/CollisionDemo';
 import InputDemo from './Views/InputDemo';
 import ManySpritesDemo from './Views/ManySpritesDemo';
-import ParentChildDemo from './Views/ParentChildDemo.js';
-import RenderTargetDemo from './Views/RenderTargetDemo.js';
+import ParentChildDemo from './Views/ParentChildDemo';
+import RenderTargetDemo from './Views/RenderTargetDemo';
 
 export default class Game extends FrostFlake {
     customViews = [];

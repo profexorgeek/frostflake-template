@@ -1,11 +1,11 @@
-import FrostFlake from '../../node_modules/frostflake/FrostFlake.js';
-import Sprite from '../../node_modules/frostflake/Positionables/Sprite.js';
-import View from '../../node_modules/frostflake/Views/View.js';
-import MathUtil from '../../node_modules/frostflake/Utility/MathUtil.js';
-import Frame from '../../node_modules/frostflake/Drawing/Frame.js';
-import Mouse from '../../node_modules/frostflake/Input/Mouse.js';
-import Keys from '../../node_modules/frostflake/Input/Keys.js';
-import Data from '../../node_modules/frostflake/Data/Data.js';
+import FrostFlake from 'frostflake';
+import Sprite from 'frostflake/Positionables/Sprite';
+import View from 'frostflake/Views/View';
+import MathUtil from 'frostflake/Utility/MathUtil';
+import Frame from 'frostflake/Drawing/Frame';
+import Mouse from 'frostflake/Input/Mouse';
+import Keys from 'frostflake/Input/Keys';
+import Data from 'frostflake/Data/Data';
 
 // This class demonstrates how to get input state
 // from the mouse and keyboard. It also demonstrates

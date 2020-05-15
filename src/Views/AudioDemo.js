@@ -1,7 +1,6 @@
-import View from '../../node_modules/frostflake/Views/View.js';
-import Data from '../../node_modules/frostflake/Data/Data.js';
-import FrostFlake from '../../node_modules/frostflake/FrostFlake.js';
-import Mouse from '../../node_modules/frostflake/Input/Mouse.js';
+import View from 'frostflake/Views/View';
+import FrostFlake from 'frostflake';
+import Mouse from 'frostflake/Input/Mouse';
 
 export default class AudioDemo extends View {
 

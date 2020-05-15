@@ -1,8 +1,8 @@
-import FrostFlake from '../../node_modules/frostflake/FrostFlake.js';
-import Sprite from '../../node_modules/frostflake/Positionables/Sprite.js';
-import View from '../../node_modules/frostflake/Views/View.js';
-import MathUtil from '../../node_modules/frostflake/Utility/MathUtil.js';
-import Data from '../../node_modules/frostflake/Data/Data.js';
+import FrostFlake from 'frostflake';
+import Sprite from 'frostflake/Positionables/Sprite';
+import View from 'frostflake/Views/View';
+import MathUtil from 'frostflake/Utility/MathUtil';
+import Data from 'frostflake/Data/Data';
 
 // This class demonstrates how to create sprites,
 // add the sprites to the current view,

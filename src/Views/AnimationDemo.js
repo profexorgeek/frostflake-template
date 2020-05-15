@@ -1,8 +1,8 @@
-import View from '../../node_modules/frostflake/Views/View.js';
-import Sprite from '../../node_modules/frostflake/Positionables/Sprite.js';
-import Frame from '../../node_modules/frostflake/Drawing/Frame.js';
-import Animation from '../../node_modules/frostflake/Drawing/Animation.js';
-import Data from '../../node_modules/frostflake/Data/Data.js';
+import View from 'frostflake/Views/View';
+import Sprite from 'frostflake/Positionables/Sprite';
+import Frame from 'frostflake/Drawing/Frame';
+import Animation from 'frostflake/Drawing/Animation';
+import Data from 'frostflake/Data/Data';
 
 // This class demonstrates frame-based animation.
 // The animation class stores a series of frames and
