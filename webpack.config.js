@@ -29,9 +29,9 @@ module.exports = {
                         plugins: [
                             '@babel/plugin-proposal-class-properties',
                             '@babel/plugin-proposal-private-methods',
-                            '@babel/plugin-transform-runtime'
+                            '@babel/plugin-transform-runtime',
                         ]
-                    }   
+                    }
                 }
             }
         ]
@@ -39,11 +39,14 @@ module.exports = {
     devServer: {
         hot: true,
         port: 8080,
-        publicPath: '/',
-        stats: {
-            hash: false,
-            chunks: false,
-            warnings: false
+        static: {
+            directory: __dirname,
+            publicPath: "/"
         }
+    },
+    stats: {
+        hash: false,
+        chunks: false,
+        warnings: false
     }
 }
