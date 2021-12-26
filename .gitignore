@@ -20,5 +20,5 @@ node_modules
 *.sublime-project
 *.sublime-workspace
 .vs/
-game.min.js.map
-game.min.js
+game.js
+game.d.ts

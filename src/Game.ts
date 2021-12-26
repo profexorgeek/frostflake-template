@@ -1,4 +1,4 @@
-import FrostFlake from 'frostflake/src/FrostFlake';
+import FrostFlake from "frostflake/src/FrostFlake";
 import AnimationDemo from './Views/AnimationDemo';
 import AudioDemo from './Views/AudioDemo';
 import CollisionDemo from './Views/CollisionDemo';

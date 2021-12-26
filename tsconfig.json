@@ -1,11 +1,9 @@
 {
   "compilerOptions": {
-    "outDir": "./build",
-    "target": "es2020",
-    "baseUrl": ".",
-    "paths": {
-      "frostflake": ["node_modules/frostflake/src/"]
-    }
+    "outFile": "./game.js",
+    "target": "ES2020",
+    "module": "System",
+    "declaration": true
   },
   "include": ["./src/**/*"],
 }
