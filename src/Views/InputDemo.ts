@@ -1,11 +1,11 @@
-import FrostFlake from 'frostflake';
-import Sprite from 'frostflake/Positionables/Sprite';
-import View from 'frostflake/Views/View';
-import MathUtil from 'frostflake/Utility/MathUtil';
-import Frame from 'frostflake/Drawing/Frame';
-import Mouse from 'frostflake/Input/Mouse';
-import Keys from 'frostflake/Input/Keys';
-import Data from 'frostflake/Data/Data';
+import FrostFlake from 'frostflake/src/FrostFlake';
+import Sprite from 'frostflake/src/Positionables/Sprite';
+import View from 'frostflake/src/Views/View';
+import MathUtil from 'frostflake/src/Utility/MathUtil';
+import Frame from 'frostflake/src/Drawing/Frame';
+import Mouse from 'frostflake/src/Input/Mouse';
+import Keys from 'frostflake/src/Input/Keys';
+import Data from 'frostflake/src/Data/Data';
 
 // This class demonstrates how to get input state
 // from the mouse and keyboard. It also demonstrates

@@ -1,10 +1,15 @@
 # FrostFlake game template
 
-This is a template project to make it easy to get started with the [FrostFlake game engine](https://github.com/profexorgeek/frostflake).
+This is a template project to make it easy to get started with the 
+[FrostFlake game engine](https://github.com/profexorgeek/frostflake).
 
-This repo includes a basic webpack configuration, **project.json** and some custom `View`s that show how to use the engine. You can build and serve your game in a browser with a single command using webpack and the webpack-dev-server.
+This repo includes a basic webpack configuration, **project.json** and 
+some custom `View`s that show how to use the engine. You can build and 
+serve your game in a browser with a single command using webpack and 
+the webpack-dev-server.
 
-The general idea is to fork this repo to get an easy starting point, and use that as the basis of your game.
+The general idea is to fork this repo to get an easy starting point, 
+and use that as the basis of your game.
 
 ## Basic: Build with NPM dependency
 
@@ -25,7 +30,7 @@ frostflake from source:
 
 1. Fork this repo and clone locally
 1. Fork the frostflake repo to be in the same parent folder as your game template. For example:
-  - `/projects/my-template-project/`
-  - `/projects/my-frostflake-clone/`
-1. In your template directory, run: `npm install "../my-frostflake-clone"`
-1. This should update the dependency in your template project's `package.json` file so instead of pointing to a specific version hosted on NPM, it instead points to `../my-frostflake-clone` locally
+  - `/projects/my-frostflake-game/`
+  - `/projects/frostflake/`
+1. In your template directory, run: `npm install "../frostflake"`
+1. This should update the dependency in your template project's `package.json` file so instead of pointing to a specific version hosted on NPM, it instead points to `../frostflake` locally

@@ -1,7 +1,7 @@
-import FrostFlake from 'frostflake';
-import Sprite from 'frostflake/Positionables/Sprite';
-import View from 'frostflake/Views/View';
-import Data from 'frostflake/Data/Data';
+import FrostFlake from 'frostflake/src/FrostFlake';
+import Sprite from 'frostflake/src/Positionables/Sprite';
+import View from 'frostflake/src/Views/View';
+import Data from 'frostflake/src/Data/Data';
 
 // This class demonstrates how the FrostFlake
 // scene graph works. Every Postionable object

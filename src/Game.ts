@@ -1,5 +1,4 @@
-import FrostFlake from 'frostflake/FrostFlake';
-
+import FrostFlake from 'frostflake/src/FrostFlake';
 import AnimationDemo from './Views/AnimationDemo';
 import AudioDemo from './Views/AudioDemo';
 import CollisionDemo from './Views/CollisionDemo';
@@ -15,9 +14,7 @@ export default class Game extends FrostFlake {
     currentViewIndex = 0;
 
     constructor() {
-        let canvasElement = document.getElementById('game');
-        super(canvasElement, 60);
-        
+        super(document.getElementById('game'), 60);                
         this.customViews.push(AnimationDemo);
         this.customViews.push(AudioDemo);
         this.customViews.push(CollisionDemo);
@@ -25,7 +22,6 @@ export default class Game extends FrostFlake {
         this.customViews.push(ManySpritesDemo);
         this.customViews.push(ParentChildDemo);
         this.customViews.push(RenderTargetDemo);
-
         this.view = new (this.customViews[this.currentViewIndex])();
     }
 

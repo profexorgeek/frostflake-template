@@ -1,10 +1,10 @@
-import View from 'frostflake/Views/View';
-import RepositionType from 'frostflake/Positionables/RepositionType';
-import Sprite from 'frostflake/Positionables/Sprite';
-import Rectangle from 'frostflake/Positionables/Rectangle';
-import Frame from 'frostflake/Drawing/Frame';
-import MathUtil from 'frostflake/Utility/MathUtil';
-import Data from 'frostflake/Data/Data';
+import View from 'frostflake/src/Views/View';
+import RepositionType from 'frostflake/src/Positionables/RepositionType';
+import Sprite from 'frostflake/src/Positionables/Sprite';
+import Rectangle from 'frostflake/src/Positionables/Rectangle';
+import Frame from 'frostflake/src/Drawing/Frame';
+import MathUtil from 'frostflake/src/Utility/MathUtil';
+import Data from 'frostflake/src/Data/Data';
 
 // This class demonstrates how to define collision shapes
 // on a sprite and how to perform collision using

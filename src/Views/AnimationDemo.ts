@@ -1,8 +1,8 @@
-import View from 'frostflake/Views/View';
-import Sprite from 'frostflake/Positionables/Sprite';
-import Frame from 'frostflake/Drawing/Frame';
-import Animation from 'frostflake/Drawing/Animation';
-import Data from 'frostflake/Data/Data';
+import View from 'frostflake/src/Views/View';
+import Sprite from 'frostflake/src/Positionables/Sprite';
+import Frame from 'frostflake/src/Drawing/Frame';
+import Animation from 'frostflake/src/Drawing/Animation';
+import Data from 'frostflake/src/Data/Data';
 
 // This class demonstrates frame-based animation.
 // The animation class stores a series of frames and

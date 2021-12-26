@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "outDir": "./build",
+    "target": "es2020",
+    "baseUrl": ".",
+    "paths": {
+      "frostflake": ["node_modules/frostflake/src/"]
+    }
+  },
+  "include": ["./src/**/*"],
+}
