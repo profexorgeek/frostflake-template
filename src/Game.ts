@@ -6,15 +6,25 @@ import InputDemo from './Views/InputDemo';
 import ManySpritesDemo from './Views/ManySpritesDemo';
 import ParentChildDemo from './Views/ParentChildDemo';
 import RenderTargetDemo from './Views/RenderTargetDemo';
+import TextStringDemo from "./Views/TextStringDemo";
+
+// This custom Game class serves as both a demo and a test.
+// There are custom Views demonstrating FrostFlake capabilities
+// in the Views folder. This game advances through the custom
+// Views, demonstrating the capabilities of the FrostFlake engine.
 
 export default class Game extends FrostFlake {
-    customViews = [];
-    secondsPerView = 5;
-    secondsToNextView = 5;
-    currentViewIndex = 0;
+    private customViews: Array<any>     = [];
+    private secondsPerView: number      = 5;
+    private secondsToNextView:number    = 5;
+    private currentViewIndex:number     = 0;
 
     constructor() {
-        super(document.getElementById('game'), 60);                
+        // pass the canvas element with ID 'game' to the parent
+        // constructor and set fps to 60
+        super(document.getElementById('game'), 60);  
+
+        // push custom views into array
         this.customViews.push(AnimationDemo);
         this.customViews.push(AudioDemo);
         this.customViews.push(CollisionDemo);
@@ -22,22 +32,35 @@ export default class Game extends FrostFlake {
         this.customViews.push(ManySpritesDemo);
         this.customViews.push(ParentChildDemo);
         this.customViews.push(RenderTargetDemo);
+        this.customViews.push(TextStringDemo);
+        
+        // set the current view to the first typpe in the list
         this.view = new (this.customViews[this.currentViewIndex])();
     }
 
     update() {
         super.update();
 
+        // if our timer has ran out, advance to the next view
         if(this.secondsToNextView <= 0) {
+
+            // update the view index
             this.currentViewIndex++;
             if(this.currentViewIndex > this.customViews.length - 1) {
                 this.currentViewIndex = 0;
             }
+
+            // get the type from the array
             let viewType = this.customViews[this.currentViewIndex];
+
+            // create a new view of the dynamic type
             this.view = new viewType();
+
+            // update the countdown timer
             this.secondsToNextView = this.secondsPerView;
         }
 
+        // decrement the countdown timer by elapsed frame time
         this.secondsToNextView -= this.time.frameSeconds;
     }
 }
