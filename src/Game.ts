@@ -9,8 +9,8 @@ import RenderTargetDemo from './Views/RenderTargetDemo';
 
 export default class Game extends FrostFlake {
     customViews = [];
-    secondsPerView = 10;
-    secondsToNextView = 10;
+    secondsPerView = 5;
+    secondsToNextView = 5;
     currentViewIndex = 0;
 
     constructor() {
