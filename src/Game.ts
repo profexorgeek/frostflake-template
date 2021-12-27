@@ -6,6 +6,7 @@ import InputDemo from './Views/InputDemo';
 import ManySpritesDemo from './Views/ManySpritesDemo';
 import ParentChildDemo from './Views/ParentChildDemo';
 import RenderTargetDemo from './Views/RenderTargetDemo';
+import ShapesDemo from "./Views/ShapesDemo";
 import TextStringDemo from "./Views/TextStringDemo";
 
 // This custom Game class serves as both a demo and a test.
@@ -32,6 +33,7 @@ export default class Game extends FrostFlake {
         this.customViews.push(ManySpritesDemo);
         this.customViews.push(ParentChildDemo);
         this.customViews.push(RenderTargetDemo);
+        this.customViews.push(ShapesDemo);
         this.customViews.push(TextStringDemo);
         
         // set the current view to the first typpe in the list
