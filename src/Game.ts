@@ -38,7 +38,7 @@ export default class Game extends FrostFlake {
         this.view = new (this.customViews[this.currentViewIndex])();
     }
 
-    update() {
+    update(): void {
         super.update();
 
         // if our timer has ran out, advance to the next view

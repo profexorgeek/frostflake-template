@@ -18,7 +18,7 @@ export default class AnimationDemo extends View {
         await Data.loadImage('/content/spritesheet.png');
 
         // create an animation object with 8, 0.1 second frames
-        let runCycle = new Animation();
+        let runCycle: Animation = new Animation();
         runCycle.texture = '/content/spritesheet.png';
         runCycle.frames = [
             new Frame(0, 160, 16, 16, 0.1),
@@ -39,6 +39,7 @@ export default class AnimationDemo extends View {
         // for easier visibility
         sprite.scale = 3;
 
+        // add the sprite to the scene graph
         this.addChild(sprite);
     }
 }

@@ -10,35 +10,36 @@ import Data from 'frostflake/src/Data/Data';
 // rotation become relative to the parent.
 
 export default class ParentChildDemo extends View {
-    parentFlake;
-    childFlake1;
-    childFlake2;
+    private parentFlake: Sprite;
+    private childFlake1: Sprite;
+    private childFlake2: Sprite;
+    private spritePath: String = '/content/frostflake.png';
 
-    async initialize() {
+    async initialize(): Promise<void> {
         await super.initialize();
 
         // load data required by this view
-        await Data.loadImage('/content/frostflake.png');
+        await Data.loadImage(this.spritePath);
 
         // create a parent sprite and add it to the View sprites
-        this.parentFlake = new Sprite('/content/frostflake.png');
+        this.parentFlake = new Sprite(this.spritePath);
         this.parentFlake.velocity.rotation = 3;
         this.addChild(this.parentFlake);
 
         // create and attach a child sprite
-        this.childFlake1 = new Sprite('/content/frostflake.png');
+        this.childFlake1 = new Sprite(this.spritePath);
         this.childFlake1.x = -40;
         this.childFlake1.velocity.rotation = -5;
         this.parentFlake.addChild(this.childFlake1);
 
         // create and attach a child sprite
-        this.childFlake2 = new Sprite('/content/frostflake.png');
+        this.childFlake2 = new Sprite(this.spritePath);
         this.childFlake2.x = 40;
         this.childFlake2.velocity.rotation = 5;
         this.parentFlake.addChild(this.childFlake2);
     }
 
-    update() {
+    update(): void {
         super.update();
 
         // log a child's relative versus absolute positions

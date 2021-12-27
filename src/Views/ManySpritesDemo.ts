@@ -11,17 +11,19 @@ import Data from 'frostflake/src/Data/Data';
 
 export default class ManySpritesDemo extends View {
 
-    async initialize() {
+    private spritePath: string = '/content/frostflake.png';
+
+    async initialize(): Promise<void> {
         await super.initialize();
 
         // load data required by this view
-        await Data.loadImage('/content/frostflake.png');
+        await Data.loadImage(this.spritePath);
 
         // Create 2000 sprites
         for (let i = 0; i < 2000; i++) {
 
             // create a new sprite, passing a path to an image file
-            let s = new Sprite('/content/frostflake.png');
+            let s = new Sprite(this.spritePath);
 
             // randomize the sprite's position
             s.x = MathUtil.randomInRange(-300, 300);
@@ -38,7 +40,7 @@ export default class ManySpritesDemo extends View {
         }
     }
 
-    update() {
+    update(): void {
         super.update();
 
         // get the ave FPS from the GameTime instance and log it

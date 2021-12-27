@@ -12,22 +12,24 @@ import Data from 'frostflake/src/Data/Data';
 
 export default class CollisionDemo extends View {
 
-    walls = [];
-    balls = [];
+    private walls: Array<Sprite>        = [];
+    private balls: Array<Sprite>        = [];
+    private spriteSheetPath: string     = '/content/spritesheet.png';
+    private frostflakePath: string      = '/content/frostflake.png';
 
-    async initialize() {
+    async initialize(): Promise<void> {
         await super.initialize();
 
         // load content required by this view
-        await Data.loadImage('/content/spritesheet.png');
-        await Data.loadImage('/content/frostflake.png');
+        await Data.loadImage(this.spriteSheetPath);
+        await Data.loadImage(this.frostflakePath);
 
         // create balls and walls
         this.createWalls();
         this.createBalls();
     }
 
-    update() {
+    update(): void {
         super.update();
 
         // During each game tick we must check every ball against
@@ -77,11 +79,11 @@ export default class CollisionDemo extends View {
     // This method creates collideable walls around the view
     // These sprites have axis-aligned rectangle collision and
     // added to an array of walls for collision testing
-    createWalls() {
+    createWalls(): void {
 
         // create floor and ceiling sprites
         for(let x = 0; x < 20; x++) {
-            let w1 = new Sprite('/content/spritesheet.png');
+            let w1 = new Sprite(this.spriteSheetPath);
             w1.collision = new Rectangle(32, 32);
             w1.frame = new Frame(7 * 32, 1 * 32, 32, 32);
             w1.x = -320 + (x * 32) + 16;
@@ -89,7 +91,7 @@ export default class CollisionDemo extends View {
             this.walls.push(w1);
             this.addChild(w1);
 
-            let w2 = new Sprite('/content/spritesheet.png');
+            let w2 = new Sprite(this.spriteSheetPath);
             w2.collision = new Rectangle(32, 32);
             w2.frame = new Frame(7 * 32, 1 * 32, 32, 32);
             w2.x = -320 + (x * 32) + 16;
@@ -100,7 +102,7 @@ export default class CollisionDemo extends View {
 
         // create walls
         for(let y = 0; y < 14; y++) {
-            let w1 = new Sprite('/content/spritesheet.png');
+            let w1 = new Sprite(this.spriteSheetPath);
             w1.collision = new Rectangle(32, 32);
             w1.frame = new Frame(7 * 32, 1 * 32, 32, 32);
             w1.x = -320 + 16;
@@ -108,7 +110,7 @@ export default class CollisionDemo extends View {
             this.walls.push(w1);
             this.addChild(w1);
 
-            let w2 = new Sprite('/content/spritesheet.png');
+            let w2 = new Sprite(this.spriteSheetPath);
             w2.collision = new Rectangle(32, 32);
             w2.frame = new Frame(7 * 32, 1 * 32, 32, 32);
             w2.x = 320 - 16;
@@ -123,10 +125,11 @@ export default class CollisionDemo extends View {
     // random positions and velocity so they bounce
     // around the view. Each sprite is added to
     // a collection of balls for collision testing.
-    createBalls() {
+    createBalls(): void {
+
         // make some things to collide
         for(let i = 0; i < 25; i++) {
-            let s = new Sprite('/content/frostflake.png');
+            let s = new Sprite(this.frostflakePath);
             s.position.x = MathUtil.randomInRange(-200, 200);
             s.position.y = MathUtil.randomInRange(-200, 200);
             s.velocity.x = MathUtil.randomInRange(-300, 300);

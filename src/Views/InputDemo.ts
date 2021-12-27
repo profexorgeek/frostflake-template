@@ -13,9 +13,9 @@ import Data from 'frostflake/src/Data/Data';
 
 export default class InputDemo extends View {
 
-    cursorSprite;
+    private cursorSprite: Sprite;
 
-    async initialize() {
+    async initialize(): Promise<void> {
         await super.initialize();
 
         // load data required by this view
@@ -42,7 +42,7 @@ export default class InputDemo extends View {
         FrostFlake.Game.camera.drag = 3;
     }
 
-    update() {
+    update(): void {
         super.update();
 
         // shortcuts for readability
@@ -78,5 +78,12 @@ export default class InputDemo extends View {
         else {
             this.cursorSprite.velocity.rotation = 0;
         }
+    }
+
+    destroy(): void {
+        super.destroy();
+
+        // reset camera position and velocity
+        FrostFlake.Game.camera.reset();
     }
 }
