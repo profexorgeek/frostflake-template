@@ -37,7 +37,7 @@ export default class ShapesDemo extends View {
             s.velocity.x = MathUtil.randomInRange(-this.maxVelocity, this.maxVelocity);
             s.velocity.y = MathUtil.randomInRange(-this.maxVelocity, this.maxVelocity);
             s.color = this.randomColorString();
-            s.position = cam.randomPositionInView();
+            s.position = cam.randomPositionInView;
             this.addChild(s);
         }
     }

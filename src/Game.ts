@@ -15,9 +15,10 @@ import TextStringDemo from "./Views/TextStringDemo";
 // Views, demonstrating the capabilities of the FrostFlake engine.
 
 export default class Game extends FrostFlake {
+    readonly secondsPerView: number      = 5;
+
     private customViews: Array<any>     = [];
-    private secondsPerView: number      = 10;
-    private secondsToNextView:number    = 10;
+    private secondsToNextView:number    = this.secondsPerView;
     private currentViewIndex:number     = 0;
 
     constructor() {
