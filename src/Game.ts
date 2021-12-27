@@ -15,8 +15,8 @@ import TextStringDemo from "./Views/TextStringDemo";
 
 export default class Game extends FrostFlake {
     private customViews: Array<any>     = [];
-    private secondsPerView: number      = 5;
-    private secondsToNextView:number    = 5;
+    private secondsPerView: number      = 10;
+    private secondsToNextView:number    = 10;
     private currentViewIndex:number     = 0;
 
     constructor() {
