@@ -1,8 +1,9 @@
-import FrostFlake from "frostflake/src/FrostFlake";
 import AnimationDemo from './Views/AnimationDemo';
 import AudioDemo from './Views/AudioDemo';
 import CollisionDemo from './Views/CollisionDemo';
+import FrostFlake from "frostflake/src/FrostFlake";
 import InputDemo from './Views/InputDemo';
+import LogLevel from "frostflake/src/Logging/LogLevel";
 import ManySpritesDemo from './Views/ManySpritesDemo';
 import ParentChildDemo from './Views/ParentChildDemo';
 import RenderTargetDemo from './Views/RenderTargetDemo';
@@ -39,6 +40,8 @@ export default class Game extends FrostFlake {
         
         // set the current view to the first typpe in the list
         this.view = new (this.customViews[this.currentViewIndex])();
+
+        FrostFlake.Log.level = LogLevel.Trace;
     }
 
     update(): void {

@@ -38,7 +38,7 @@ export default class RenderTargetDemo extends View {
             s.x = MathUtil.randomInRange(-300, 300);
             s.y = MathUtil.randomInRange(-200, 200);
             s.alpha = MathUtil.randomInRange(0.2, 0.85);
-            s.scale = MathUtil.randomInRange(0.15, 0.2);
+            s.scale = MathUtil.randomInRange(0.15, 0.5);
             s.position.rotation = MathUtil.randomInRange(-3, 3);
 
             // add the sprite to the tmp array
@@ -46,13 +46,17 @@ export default class RenderTargetDemo extends View {
         }
 
         // now render all of the sprites in the temporary array to a new 640x480 texture
+        FrostFlake.Log.trace(`Rendering ${RenderTargetDemo.SPRITE_COUNT} to dynamic texture`);
         await FrostFlake.Game.renderer.renderCustomImage(RenderTargetDemo.TARGETNAME, sprites, 640, 480);
 
         // create a sprite that uses the custom texture
+        FrostFlake.Log.trace(`Using dynamic texture for sprite: ${RenderTargetDemo.TARGETNAME}`);
         let renderedSprite = new Sprite(RenderTargetDemo.TARGETNAME);
 
         // give the whole texture a rotation velocity
-        renderedSprite.velocity.rotation = MathUtil.randomInRange(-1, 1);
+        var rotationSpeed = MathUtil.randomInRange(-2, 2);
+        renderedSprite.velocity.rotation = rotationSpeed;
+        FrostFlake.Log.trace(`Sprite rotating at: ${renderedSprite.velocity.rotation} of ${rotationSpeed} rads/sec`);
 
         // add the single sprite to the scene graph
         this.addChild(renderedSprite);

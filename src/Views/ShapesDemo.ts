@@ -46,7 +46,7 @@ export default class ShapesDemo extends View {
         super.update();
 
         // get the ave FPS from the GameTime instance and log it
-        FrostFlake.Log.info(FrostFlake.Game.time.aveFps());
+        FrostFlake.Log.trace(`Ave FPS: ${FrostFlake.Game.time.aveFps()}`);
     }
 
     // helper to get a random color as an rgb string

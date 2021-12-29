@@ -13,7 +13,7 @@ export default class ParentChildDemo extends View {
     private parentFlake: Sprite;
     private childFlake1: Sprite;
     private childFlake2: Sprite;
-    private spritePath: String = '/content/frostflake.png';
+    private spritePath: string = '/content/frostflake.png';
 
     async initialize(): Promise<void> {
         await super.initialize();
@@ -44,6 +44,6 @@ export default class ParentChildDemo extends View {
 
         // log a child's relative versus absolute positions
         let child = this.childFlake1;
-        FrostFlake.Log.info(`Relative vs absolute position: ${child.x},${child.y} - ${child.absolutePosition.x},${child.absolutePosition.y}`);
+        FrostFlake.Log.trace(`Relative vs absolute position: ${child.x},${child.y} - ${child.absolutePosition.x},${child.absolutePosition.y}`);
     }
 }
