@@ -1,6 +1,6 @@
 import View from 'frostflake/src/Views/View';
 import FrostFlake from 'frostflake/src/FrostFlake';
-import Mouse from 'frostflake/src/Input/Mouse';
+import { MouseButtons } from 'frostflake/src/Input/Codes';
 import Text from 'frostflake/src/Positionables/Text';
 
 // This class demonstrates playing a sound. The user must
@@ -31,7 +31,7 @@ export default class AudioDemo extends View {
         super.update();
 
         // play the loaded sound on click
-        if(FrostFlake.Game.input.buttonPushed(Mouse.Left)) {
+        if(FrostFlake.Game.input.buttonPushed(MouseButtons.Left)) {
             FrostFlake.Game.audio.playSound(this.soundFileName);
         }
     }

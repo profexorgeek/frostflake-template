@@ -25,7 +25,7 @@ export default class Game extends FrostFlake {
     constructor() {
         // pass the canvas element with ID 'game' to the parent
         // constructor and set fps to 60
-        super(document.getElementById('game'), 60);  
+        super(document.getElementById('game') as HTMLCanvasElement, 60);  
 
         // push custom views into array
         this.customViews.push(AnimationDemo);

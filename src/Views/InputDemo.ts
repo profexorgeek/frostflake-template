@@ -3,8 +3,7 @@ import Sprite from 'frostflake/src/Positionables/Sprite';
 import View from 'frostflake/src/Views/View';
 import MathUtil from 'frostflake/src/Utility/MathUtil';
 import Frame from 'frostflake/src/Drawing/Frame';
-import Mouse from 'frostflake/src/Input/Mouse';
-import Keys from 'frostflake/src/Input/Keys';
+import { MouseButtons, Keys } from 'frostflake/src/Input/Codes';
 import Data from 'frostflake/src/Data/Data';
 
 // This class demonstrates how to get input state
@@ -72,7 +71,7 @@ export default class InputDemo extends View {
         this.cursorSprite.y = cursor.worldY;
 
         // make the cursor spin when the mouse button is pressed
-        if(input.buttonDown(Mouse.Left)) {
+        if(input.buttonDown(MouseButtons.Left)) {
             this.cursorSprite.velocity.rotation = 3;
         }
         else {
