@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "outFile": "./game.js",
     "target": "ES2020",
     "module": "AMD",
+    "outDir": "./dist",
+    "sourceMap": true,
+    "moduleResolution": "Node",
     "removeComments": true,
-    "inlineSourceMap": true,
-    "declaration": true
+    "declaration": true,
   },
   "include": ["./src/**/*"],
 }

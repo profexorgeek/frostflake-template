@@ -4,7 +4,7 @@
   "description": "This is a demonstration of the FrostFlake game engine. This template can be used as a starting point for a new game using FrostFlake!",
   "main": "start.js",
   "scripts": {
-    "build": "tsc",
+    "build": "npx webpack --mode=development",
     "prepare": "npm run build",
     "start": "http-server -c-1"
   },
@@ -21,11 +21,13 @@
   },
   "homepage": "https://github.com/profexorgeek/frostflake-template#readme",
   "devDependencies": {
-    "http-server": "^14.0.0",
-    "ts-loader": "^9.2.6",
-    "typescript": "^4.5.4"
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.5.3",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "frostflake": "file:../frostflake"
+    "frostflake": "file:../frostflake",
+    "http-server": "^14.1.1"
   }
 }
