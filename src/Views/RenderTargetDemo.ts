@@ -32,7 +32,8 @@ export default class RenderTargetDemo extends View {
         await Data.loadImage(RenderTargetDemo.TEXTURE);
 
         // add a ton of sprites
-        FrostFlake.Log.info(`Adding ${RenderTargetDemo.SPRITE_COUNT} sprites for one-time render`);
+        FrostFlake.Log.trace(`Adding ${RenderTargetDemo.SPRITE_COUNT} sprites for one-time render`);
+        
         for (let i = 0; i < RenderTargetDemo.SPRITE_COUNT; i++) {
             let s = new Sprite(RenderTargetDemo.TEXTURE);
             s.x = MathUtil.randomInRange(-300, 300);
