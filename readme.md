@@ -1,12 +1,12 @@
 # FrostFlake game template
 
-This is a template project to make it easy to get started with the 
+This is a template project to make it easy to get started with the
 [FrostFlake game engine](https://github.com/profexorgeek/frostflake).
 
-This repo includes a basic webpack configuration, **project.json** and 
+This repo includes a basic webpack configuration, **project.json** and
 some custom `View`s that show how to use the engine.
 
-The general idea is to fork this repo to get an easy starting point, 
+The general idea is to fork this repo to get an easy starting point,
 and use that as the basis of your game.
 
 ## Basic: Build with NPM dependency
