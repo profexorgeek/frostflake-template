@@ -72,6 +72,10 @@ export default class Game extends FrostFlake {
             // destroy the old view
             oldView.destroy();
 
+            // reset the camera position
+            this.camera.position.x = 0;
+            this.camera.position.y = 0;
+
             // update the countdown timer
             this.secondsToNextView = this.secondsPerView;
         }
