@@ -9,6 +9,7 @@ import ParentChildDemo from './Views/ParentChildDemo';
 import RenderTargetDemo from './Views/RenderTargetDemo';
 import ShapesDemo from "./Views/ShapesDemo";
 import TextStringDemo from "./Views/TextStringDemo";
+import View from "frostflake/src/Views/View";
 
 // This custom Game class serves as both a demo and a test.
 // There are custom Views demonstrating FrostFlake capabilities
@@ -18,7 +19,7 @@ import TextStringDemo from "./Views/TextStringDemo";
 export default class Game extends FrostFlake {
     readonly secondsPerView: number      = 5;
 
-    private customViews: Array<any>     = [];
+    private customViews: Array<typeof View>     = [];
     private secondsToNextView:number    = this.secondsPerView;
     private currentViewIndex:number     = 0;
 
@@ -58,6 +59,12 @@ export default class Game extends FrostFlake {
 
             // get the type from the array
             let viewType = this.customViews[this.currentViewIndex];
+
+            // log what we're doing
+            FrostFlake.Log.info(`Moving to new view of type: ${viewType.name}`);
+
+            // get the old view so we can destroy it
+            let oldView = this.view;
 
             // create a new view of the dynamic type
             this.view = new viewType();
