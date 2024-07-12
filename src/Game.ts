@@ -69,6 +69,9 @@ export default class Game extends FrostFlake {
             // create a new view of the dynamic type
             this.view = new viewType();
 
+            // destroy the old view
+            oldView.destroy();
+
             // update the countdown timer
             this.secondsToNextView = this.secondsPerView;
         }
