@@ -26,7 +26,10 @@ export default class Game extends FrostFlake {
     constructor() {
         // pass the canvas element with ID 'game' to the parent
         // constructor and set fps to 60
-        super(document.getElementById('game') as HTMLCanvasElement, 60);  
+        super(document.getElementById('game') as HTMLCanvasElement, 60);
+
+        // set the log level to the level of information we want
+        FrostFlake.Log.level = LogLevel.Info;
 
         // push custom views into array
         this.customViews.push(AnimationDemo);
@@ -41,8 +44,6 @@ export default class Game extends FrostFlake {
         
         // set the current view to the first typpe in the list
         this.view = new (this.customViews[this.currentViewIndex])();
-
-        FrostFlake.Log.level = LogLevel.Trace;
     }
 
     update(): void {
