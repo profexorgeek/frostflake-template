@@ -37,6 +37,9 @@ export default class ManySpritesDemo extends View {
             // randomize the alpha (transparency)
             s.alpha = MathUtil.randomInRange(this.minAlpha, this.maxAlpha);
 
+            // use additive blend mode
+            s.blendMode = "lighter";
+
             // randomize scale
             s.scale = MathUtil.randomInRange(this.minScale, this.maxScale);
 
