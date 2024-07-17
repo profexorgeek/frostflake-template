@@ -42,13 +42,18 @@ export default class Game extends FrostFlake {
         this.customViews.push(ShapesDemo);
         this.customViews.push(TextStringDemo);
         
-        // set the current view to the first typpe in the list
+        // set the current view to the first type in the list
         this.view = new (this.customViews[this.currentViewIndex])();
     }
 
     update(): void {
         super.update();
 
+        this.doScreenSwitching();
+    }
+
+    doScreenSwitching(): void
+    {
         // if our timer has ran out, advance to the next view
         if(this.secondsToNextView <= 0) {
 
