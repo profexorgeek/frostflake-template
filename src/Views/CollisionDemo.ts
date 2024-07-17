@@ -85,6 +85,7 @@ export default class CollisionDemo extends View {
         for(let x = 0; x < 20; x++) {
             let w1 = new Sprite(this.spriteSheetPath);
             w1.collision = new Rectangle(32, 32);
+            w1.collision.color = "red";
             w1.frame = new Frame(7 * 32, 1 * 32, 32, 32);
             w1.x = -320 + (x * 32) + 16;
             w1.y = 240 - 16;
@@ -93,6 +94,7 @@ export default class CollisionDemo extends View {
 
             let w2 = new Sprite(this.spriteSheetPath);
             w2.collision = new Rectangle(32, 32);
+            w2.collision.color = "red";
             w2.frame = new Frame(7 * 32, 1 * 32, 32, 32);
             w2.x = -320 + (x * 32) + 16;
             w2.y = -240 + 16;
@@ -104,6 +106,7 @@ export default class CollisionDemo extends View {
         for(let y = 0; y < 14; y++) {
             let w1 = new Sprite(this.spriteSheetPath);
             w1.collision = new Rectangle(32, 32);
+            w1.collision.color = "red";
             w1.frame = new Frame(7 * 32, 1 * 32, 32, 32);
             w1.x = -320 + 16;
             w1.y = -240 + (y * 32) + 16;
@@ -112,6 +115,7 @@ export default class CollisionDemo extends View {
 
             let w2 = new Sprite(this.spriteSheetPath);
             w2.collision = new Rectangle(32, 32);
+            w2.collision.color = "red";
             w2.frame = new Frame(7 * 32, 1 * 32, 32, 32);
             w2.x = 320 - 16;
             w2.y = -240 + (y * 32) + 16;
